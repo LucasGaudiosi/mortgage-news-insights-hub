@@ -20,269 +20,354 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fb;
+    background:#f5f7fa;
     color:#333;
-    line-height:1.6;
 }
 
-header{
-   <header class="hero">
+.navbar{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
 
-    <div class="hero-overlay">
+.logo{
+    max-width:250px;
+}
 
-        <img
-            src="images/ACM wide logo.png"
-            alt="Atlantic Coast Mortgage"
-            class="logo">
+.nav-links a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#002f6c;
+    font-weight:bold;
+}
 
-        <div class="hero-content">
+.hero{
+    background:linear-gradient(
+        rgba(0,75,147,.85),
+        rgba(0,75,147,.85)
+    );
+    color:white;
+    min-height:650px;
+    display:flex;
+    align-items:center;
+}
 
-            <p class="hero-subtitle">
-                Atlantic Coast Mortgage Internship Project
-            </p>
+.hero-content{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
 
-            <h1>
-                Mortgage News &
-                Insights Hub
-            </h1>
+.hero-subtitle{
+    font-size:18px;
+    margin-bottom:15px;
+    font-weight:bold;
+}
 
-            <p class="hero-text">
-                Your centralized resource for mortgage news,
-                housing trends, economic developments,
-                technology innovation, and     #daily
-                    Daily Updates
-                </a>
+.hero h1{
+    font-size:72px;
+    line-height:1.05;
+    max-width:700px;
+    margin-bottom:20px;
+}
 
-                #education
-                    Education Center
-                </a>
+.hero p{
+    font-size:22px;
+    max-width:750px;
+    margin-bottom:35px;
+}
 
-            </div>
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn-primary{
+    background:#4bc57a;
+    color:white;
+    text-decoration:none;
+    padding:15px 28px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.btn-secondary{
+    background:white;
+    color:#004b93;
+    text-decoration:none;
+    padding:15px 28px;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.section{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.section h2{
+    text-align:center;
+    color:#002f6c;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#004b93;
+    margin-bottom:12px;
+}
+
+.education-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.education-card{
+    background:white;
+    border-left:5px solid #0b66c3;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.education-card h4{
+    color:#004b93;
+    margin-bottom:10px;
+}
+
+.footer{
+    background:#002f6c;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:250px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <img src="images/ACM wide logo.png"
+         alt="Atlantic Coast Mortgage"
+         class="logo">
+
+    <div class="nav-links">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#daily">Daily Updates>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-subtitle">
+            Atlantic Coast Mortgage Internship Project
+        </div>
+
+        <h1>
+            Mortgage News &
+            Insights Hub
+        </h1>
+
+        <p>
+            Helping Atlantic Coast Mortgage employees understand
+            mortgage industry news, housing trends, economic
+            developments, technology innovation, and market changes.
+        </p>
+
+        <div class="hero-buttons">
+
+            #daily
+                Daily Updates
+            </a>
+
+            #education
+                Education Center
+            </a>
 
         </div>
 
     </div>
 
-</header>
+</section>
 
+<section class="section" id="dashboard">
 
-</header>
+    <h2>Market Intelligence Dashboard</h2>
 
-<nav>
-    <aa>
-    #databaseIndustry Database</a>
-    #educationEducation Center</a>
-    <aechnologyAI & Technology</a>
-</nav>
+    <div class="cards">
 
-<div class="container">
-
-    <section id="dashboard">
-
-        <h2 class="section-title">Dashboard Overview</h2>
-
-        <div class="card-grid">
-
-            <div class="card">
-                <h3>Daily Summaries</h3>
-                <p>
-                    Monitor mortgage, housing, economic,
-                    inflation, and technology news while
-                    providing easy-to-understand explanations.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Weekly Reports</h3>
-                <p>
-                    Comprehensive reports and presentations
-                    summarizing important market developments
-                    and trends.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Industry Database</h3>
-                <p>
-                    Centralized repository for industry news,
-                    economic updates, mortgage market information,
-                    and technology developments.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <br><br>
-
-    <section id="daily">
-
-        <h2 class="section-title">Daily Summary Template</h2>
-
-        <div class="featured-box">
-
-            <h3>Example Daily Update</h3>
-
-            <p><strong>Headline:</strong> Mortgage Rates Move Higher</p>
-
-            <p><strong>Summary:</strong> Explain the news in plain language.</p>
-
-            <p><strong>Why It Matters:</strong> Explain the broader impact.</p>
-
-            <p><strong>Borrower Impact:</strong> How it affects homeowners and buyers.</p>
-
-            <p><strong>Lender Impact:</strong> How it affects lending activity.</p>
-
-            <p><strong>Housing Market Impact:</strong> Effect on affordability and demand.</p>
-
-        </div>
-
-    </section>
-
-    <br><br>
-
-    <section id="weekly">
-
-        <h2 class="section-title">Weekly Reports</h2>
-
-        <div class="card-grid">
-
-            <div class="card">
-                <h3>Executive Summary</h3>
-                <p>Top developments from the week.</p>
-            </div>
-
-            <div class="card">
-                <h3>Mortgage Market Update</h3>
-                <p>Rates, refinance activity, and lending trends.</p>
-            </div>
-
-            <div class="card">
-                <h3>Economic Update</h3>
-                <p>Inflation, employment, GDP, and Federal Reserve news.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <br><br>
-
-    <section id="database">
-
-        <h2 class="section-title">Industry News Database</h2>
-
-        <div>
-            <span class="badge">Mortgage Rates</span>
-            <span class="badge">Housing</span>
-            <span class="badge">Economy</span>
-            <span class="badge">Inflation</span>
-            <span class="badge">Technology</span>
-            <span class="badge">AI</span>
-            <span class="badge">Regulation</span>
-            <span class="badge">Consumer Trends</span>
-        </div>
-
-        <br>
-
-        <div class="featured-box">
-
+        <div class="card">
+            <h3>📈 Mortgage Rates</h3>
             <p>
-                This searchable database will contain industry news,
-                economic topics, housing updates, interest rate trends,
-                technology developments, and educational resources.
+                Track interest rate movements and affordability trends.
             </p>
-
         </div>
 
-    </section>
-
-    <br><br>
-
-    <section id="education">
-
-        <h2 class="section-title">Education Center</h2>
-
-        <div class="education-grid">
-
-            <div class="education-card">
-                <h4>Interest Rates</h4>
-                <p>Borrowing costs and affordability.</p>
-            </div>
-
-            <div class="education-card">
-                <h4>Inflation</h4>
-                <p>Prices, purchasing power, and economic impact.</p>
-            </div>
-
-            <div class="education-card">
-                <h4>Credit Markets</h4>
-                <p>Borrowers, lenders, and investors.</p>
-            </div>
-
-            <div class="education-card">
-                <h4>Mortgage-Backed Securities</h4>
-                <p>How mortgages become investments.</p>
-            </div>
-
-            <div class="education-card">
-                <h4>Housing Supply & Demand</h4>
-                <p>Inventory, home prices, and affordability.</p>
-            </div>
-
-            <div class="education-card">
-                <h4>Federal Reserve Decisions</h4>
-                <p>Monetary policy and market effects.</p>
-            </div>
-
-            <div class="education-card">
-                <h4>Mortgage Products & Pricing</h4>
-                <p>Conventional, FHA, VA, Jumbo, and more.</p>
-            </div>
-
-            <div class="education-card">
-                <h4>AI & Technology in Lending</h4>
-                <p>The future of mortgage operations.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <br><br>
-
-    <section id="technology">
-
-        <h2 class="section-title">Featured Technology Spotlight</h2>
-
-        <div class="featured-box">
-
-            <h3>Artificial Intelligence in Mortgage Lending</h3>
-
+        <div class="card">
+            <h3>🏠 Housing Market</h3>
             <p>
-                Artificial Intelligence is transforming the mortgage
-                industry through underwriting support, automated
-                document review, fraud detection, workflow automation,
-                and customer service improvements.
+                Housing inventory, demand, home prices, and market activity.
             </p>
-
-            <br>
-
-            <p>
-                This section will highlight technology companies,
-                mortgage innovation, fintech trends, and practical
-                examples of AI adoption across the industry.
-            </p>
-
         </div>
 
-    </section>
+        <div class="card">
+            <h3>💵 Economy</h3>
+            <p>
+                Inflation, employment, GDP growth, and Federal Reserve updates.
+            </p>
+        </div>
 
-</div>
+        <div class="card">
+            <h3>🤖 Technology & AI</h3>
+            <p>
+                Mortgage innovation, fintech developments, and AI adoption.
+            </p>
+        </div>
 
-<footer>
-    Mortgage News & Insights Hub | Atlantic Coast Mortgage Internship Project
+    </div>
+
+</section>
+
+<section class="section" id="daily">
+
+    <h2>Daily Summaries</h2>
+
+    <div class="card">
+
+        <h3>Featured Daily Update</h3>
+
+        <p>
+            Add current mortgage, housing, economic,
+            or technology developments here.
+        </p>
+
+        <p>
+            Include:
+        </p>
+
+        <ul>
+            <li>Summary</li>
+            <li>Why It Matters</li>
+            <li>Borrower Impact</li>
+            <li>Lender Impact</li>
+            <li>Housing Market Impact</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<section class="section" id="weekly">
+
+    <h2>Weekly Reports</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Executive Summary</h3>
+        </div>
+
+        <div class="card">
+            <h3>Mortgage Market</h3>
+        </div>
+
+        <div class="card">
+            <h3>Economic Outlook</h3>
+        </div>
+
+        <div class="card">
+            <h3>Technology Spotlight</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="education">
+
+    <h2>Education Center</h2>
+
+    <div class="education-grid">
+
+        <div class="education-card">
+            <h4>Interest Rates</h4>
+        </div>
+
+        <div class="education-card">
+            <h4>Inflation</h4>
+        </div>
+
+        <div class="education-card">
+            <h4>Credit Markets</h4>
+        </div>
+
+        <div class="education-card">
+            <h4>Mortgage‑Backed Securities</h4>
+        </div>
+
+        <div class="education-card">
+            <h4>Housing Supply & Demand</h4>
+        </div>
+
+        <div class="education-card">
+            <h4>Federal Reserve Decisions</h4>
+        </div>
+
+        <div class="education-card">
+            <h4>Mortgage Products & Pricing</h4>
+        </div>
+
+        <div class="education-card">
+            <h4>AI & Technology in Mortgage Lending</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    Mortgage News & Insights Hub |
+    Atlantic Coast Mortgage Internship Project
+
 </footer>
 
 </body>
