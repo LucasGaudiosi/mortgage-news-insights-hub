@@ -1,105 +1,246 @@
-// Mortgage News & Insights Hub
-// JavaScript Functions
+/* =====================================
+   Atlantic Coast Mortgage
+   Mortgage News & Insights Hub
+===================================== */
 
 
-// Hero Button Scroll Function
 
-const exploreButton = document.querySelector(".hero button");
+// ================================
+// Hero Button Smooth Scroll
+// ================================
 
 
-exploreButton.addEventListener("click", function () {
+const updateButton = document.querySelector(".hero .primary-btn");
 
-    document
+
+if(updateButton){
+
+    updateButton.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        document
         .querySelector("#updates")
         .scrollIntoView({
-            behavior: "smooth"
+            behavior:"smooth"
         });
 
-});
-
-
-
-
-// Future Automated News Feed
-
-const newsContainer = document.querySelector(".news-container");
-
-
-// Example structure for future AI news agent
-
-function loadNewsArticles(articles) {
-
-
-    newsContainer.innerHTML = "";
-
-
-    articles.forEach(article => {
-
-
-        const newsCard = document.createElement("article");
-
-        newsCard.classList.add("news-card");
-
-
-        newsCard.innerHTML = `
-
-            <h3>${article.title}</h3>
-
-            <p>
-                ${article.description}
-            </p>
-
-            <span>
-                ${article.date}
-            </span>
-
-        `;
-
-
-        newsContainer.appendChild(newsCard);
-
-
     });
+
+}
+
+
+
+
+
+// ================================
+// Mortgage News Data
+// (Will be replaced by AI Agent)
+// ================================
+
+
+const mortgageNews = [
+
+
+{
+    title:"Mortgage Rates Remain a Market Focus",
+
+    description:
+    "Mortgage professionals continue monitoring inflation data, Federal Reserve decisions, and bond market movement.",
+
+    category:
+    "Interest Rates"
+
+},
+
+
+
+{
+    title:"Housing Inventory Shows New Trends",
+
+    description:
+    "Housing supply and affordability continue influencing buyer demand across the country.",
+
+    category:
+    "Housing Market"
+
+},
+
+
+
+{
+    title:"Artificial Intelligence in Mortgage Lending",
+
+    description:
+    "AI automation is improving processing times, borrower communication, and operational efficiency.",
+
+    category:
+    "Technology"
+
+}
+
+];
+
+
+
+
+
+
+// ================================
+// Load News Articles
+// ================================
+
+
+function displayNews(news){
+
+
+const container =
+document.querySelector(".news-grid");
+
+
+
+if(!container){
+
+    return;
+
+}
+
+
+
+container.innerHTML="";
+
+
+
+news.forEach(article => {
+
+
+const card=document.createElement("div");
+
+
+card.className="news-card";
+
+
+
+card.innerHTML=`
+
+<div class="news-image"></div>
+
+
+<h3>
+${article.title}
+</h3>
+
+
+<p>
+${article.description}
+</p>
+
+
+<a href="#">
+${article.category} →
+</a>
+
+`;
+
+
+
+container.appendChild(card);
+
+
+
+});
 
 
 }
 
 
 
-// Sample data (will later be replaced by automated agent/API)
-
-const sampleNews = [
-
-    {
-        title: "Mortgage Rates Hold Steady",
-        description:
-        "Mortgage markets continue monitoring inflation data and Federal Reserve decisions.",
-        date:
-        "Updated Today"
-    },
 
 
-    {
-        title: "Housing Inventory Trends",
-        description:
-        "New housing supply continues influencing affordability and buyer demand.",
-        date:
-        "Updated Today"
-    },
+// Load Initial Articles
 
-
-    {
-        title: "AI Transforming Mortgage Lending",
-        description:
-        "Automation and artificial intelligence are improving borrower experiences.",
-        date:
-        "Updated Today"
-    }
-
-];
+displayNews(mortgageNews);
 
 
 
-// Load sample news
 
-loadNewsArticles(sampleNews);
+
+
+
+// ================================
+// Add Date Display
+// ================================
+
+
+const today =
+new Date();
+
+
+
+const formattedDate =
+today.toLocaleDateString();
+
+
+
+const dateElement =
+document.createElement("p");
+
+
+
+dateElement.innerHTML =
+"Last Updated: " + formattedDate;
+
+
+
+dateElement.style.textAlign="center";
+
+dateElement.style.marginTop="20px";
+
+dateElement.style.color="#555";
+
+
+
+const updatesSection =
+document.querySelector("#updates");
+
+
+
+if(updatesSection){
+
+updatesSection.appendChild(dateElement);
+
+}
+
+
+
+
+
+
+
+
+// ================================
+// Future AI News Agent Connection
+// ================================
+
+
+// Later this function will:
+//
+// 1. Connect to news API
+// 2. Send articles to AI
+// 3. Generate summaries
+// 4. Update website automatically
+// 5. Commit changes to GitHub
+//
+// Example:
+//
+// fetch("/api/news")
+// .then(response=>response.json())
+// .then(data=>{
+//     displayNews(data);
+// });
+
+
+
+console.log(
+"Mortgage News Hub Loaded Successfully"
+);
