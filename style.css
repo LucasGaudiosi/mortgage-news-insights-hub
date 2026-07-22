@@ -1,4 +1,8 @@
-/* General Styling */
+/* =========================
+   ACM Mortgage News Hub
+   Professional Styling
+========================= */
+
 
 * {
     margin: 0;
@@ -14,28 +18,38 @@ html {
 
 
 body {
-    background: #ffffff;
     color: #333;
-    line-height: 1.6;
+    background: white;
 }
 
 
 
-/* Navigation */
+/* =========================
+   Navigation
+========================= */
+
 
 header {
-    background: #006b45;
-    width: 100%;
+
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
 }
 
 
 .navbar {
 
+    height: 95px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 15px 60px;
+    padding: 0 70px;
 
 }
 
@@ -43,8 +57,7 @@ header {
 
 .logo img {
 
-    height: 75px;
-    width: auto;
+    width: 210px;
 
 }
 
@@ -62,30 +75,34 @@ header {
 
 .nav-links a {
 
-    color: white;
     text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
+    color: #1b2d5c;
+
+    font-size: 16px;
+    font-weight: 600;
 
 }
+
 
 
 .nav-links a:hover {
 
-    color: #d9f2e8;
+    color: #0075ff;
 
 }
 
 
 
-.apply-btn {
 
-    background: white;
-    color: #006b45;
+.apply-button {
 
-    padding: 12px 25px;
+    background: #0d2fa8;
 
-    border-radius: 25px;
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 30px;
 
     text-decoration: none;
 
@@ -95,9 +112,9 @@ header {
 
 
 
-.apply-btn:hover {
+.apply-button:hover {
 
-    background: #d9f2e8;
+    background:#0075ff;
 
 }
 
@@ -105,31 +122,41 @@ header {
 
 
 
-/* Hero Section */
+
+/* =========================
+   Hero
+========================= */
 
 
 .hero {
 
-    height: 500px;
+    height: 600px;
+
 
     background:
+
     linear-gradient(
-        rgba(0,107,69,.75),
-        rgba(0,107,69,.75)
+        rgba(13,47,168,.80),
+        rgba(13,47,168,.80)
     ),
+
     url("images/hero.jpg");
 
+
     background-size: cover;
-    background-position: center;
 
-    display: flex;
+    background-position:center;
 
-    align-items: center;
-    justify-content: center;
 
-    text-align: center;
+    display:flex;
 
-    color: white;
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    color:white;
 
 }
 
@@ -137,7 +164,7 @@ header {
 
 .hero-content {
 
-    max-width: 850px;
+    max-width:900px;
 
 }
 
@@ -145,9 +172,9 @@ header {
 
 .hero h1 {
 
-    font-size: 50px;
+    font-size:55px;
 
-    margin-bottom: 20px;
+    margin-bottom:25px;
 
 }
 
@@ -155,59 +182,95 @@ header {
 
 .hero p {
 
-    font-size: 20px;
+    font-size:21px;
 
-    margin-bottom: 30px;
+    line-height:1.7;
 
-}
-
-
-
-.hero button {
-
-    background: white;
-
-    border: none;
-
-    color: #006b45;
-
-    padding: 15px 35px;
-
-    border-radius: 30px;
-
-    font-size: 17px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-}
-
-
-.hero button:hover {
-
-    background:#d9f2e8;
+    margin-bottom:35px;
 
 }
 
 
 
 
+.hero-buttons {
 
-/* Sections */
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+
+
+.primary-btn,
+.secondary-btn {
+
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.primary-btn {
+
+    background:white;
+
+    color:#0d2fa8;
+
+}
+
+
+
+.secondary-btn {
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+
+
+.primary-btn:hover {
+
+    background:#aeecff;
+
+}
+
+
+
+.secondary-btn:hover {
+
+    background:white;
+
+    color:#0d2fa8;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Sections
+========================= */
 
 
 .section {
 
-    padding: 70px 80px;
-
-}
-
-
-
-.gray {
-
-    background:#f4f7f6;
+    padding:80px 90px;
 
 }
 
@@ -217,11 +280,31 @@ header {
 
     text-align:center;
 
-    color:#006b45;
+    color:#0d2fa8;
 
-    font-size:35px;
+    font-size:38px;
 
-    margin-bottom:40px;
+    margin-bottom:15px;
+
+}
+
+
+
+.section-description {
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+    color:#666;
+
+}
+
+
+
+.light-background {
+
+    background:#f5f8ff;
 
 }
 
@@ -229,48 +312,58 @@ header {
 
 
 
-/* Dashboard Cards */
 
 
-.cards {
+/* =========================
+   Feature Cards
+========================= */
+
+
+.feature-grid {
 
     display:grid;
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:25px;
+    gap:30px;
 
 }
 
 
 
-.card {
+.feature-card {
+
 
     background:white;
 
-    padding:30px;
+    padding:35px;
+
 
     border-radius:15px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
 
     transition:.3s;
 
-}
-
-
-
-.card:hover {
-
-    transform:translateY(-5px);
 
 }
 
 
 
-.card h3 {
+.feature-card:hover {
 
-    color:#006b45;
+    transform:translateY(-8px);
+
+}
+
+
+
+.feature-card h3 {
+
+    color:#0d2fa8;
 
     margin-bottom:15px;
 
@@ -281,16 +374,18 @@ header {
 
 
 
-/* News Cards */
+/* =========================
+   News Cards
+========================= */
 
 
-.news-container {
+.news-grid {
 
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:25px;
+    gap:30px;
 
 }
 
@@ -298,13 +393,27 @@ header {
 
 .news-card {
 
-    background:white;
 
-    padding:30px;
+    background:white;
 
     border-radius:15px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    overflow:hidden;
+
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.1);
+
+
+}
+
+
+
+.news-image {
+
+    height:160px;
+
+    background:#aeecff;
 
 }
 
@@ -312,7 +421,86 @@ header {
 
 .news-card h3 {
 
-    color:#006b45;
+    padding:25px 25px 10px;
+
+    color:#0d2fa8;
+
+}
+
+
+
+.news-card p {
+
+    padding:0 25px;
+
+}
+
+
+
+.news-card a {
+
+
+    display:block;
+
+    padding:25px;
+
+
+    color:#0075ff;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Education
+========================= */
+
+
+.education-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+
+}
+
+
+
+.education-box {
+
+
+    padding:35px;
+
+    background:white;
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.education-box h3 {
+
+    color:#0d2fa8;
 
     margin-bottom:15px;
 
@@ -320,15 +508,42 @@ header {
 
 
 
-.news-card span {
 
-    display:inline-block;
 
-    margin-top:20px;
 
-    color:#006b45;
 
-    font-weight:bold;
+/* =========================
+   Technology Section
+========================= */
+
+
+.technology {
+
+    background:#0d2fa8;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+.technology h2 {
+
+    color:white;
+
+}
+
+
+
+.technology p {
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    font-size:20px;
 
 }
 
@@ -336,30 +551,38 @@ header {
 
 
 
-/* Weekly Reports */
+/* =========================
+   Reports
+========================= */
 
 
-.report-box {
+.report {
+
 
     max-width:800px;
 
     margin:auto;
 
+
     background:white;
 
     padding:40px;
 
+
     border-radius:15px;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.08);
+
 
 }
 
 
 
-.report-box h3 {
+.report h3 {
 
-    color:#006b45;
+    color:#0d2fa8;
 
     margin-bottom:20px;
 
@@ -367,7 +590,7 @@ header {
 
 
 
-.report-box ul {
+.report ul {
 
     margin-left:25px;
 
@@ -377,59 +600,34 @@ header {
 
 
 
-/* Education Center */
 
 
-.education-grid {
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:25px;
-
-}
-
-
-
-.education-card {
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:15px;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-
-}
-
-
-
-.education-card h3 {
-
-    color:#006b45;
-
-    margin-bottom:15px;
-
-}
-
-
-
-
-
-/* Footer */
+/* =========================
+   Footer
+========================= */
 
 
 footer {
 
-    background:#006b45;
+    background:#071747;
 
     color:white;
 
     text-align:center;
 
-    padding:25px;
+    padding:40px;
+
+
+}
+
+
+
+footer img {
+
+    width:180px;
+
+    margin-bottom:20px;
+
 
 }
 
@@ -438,70 +636,89 @@ footer {
 
 
 
-/* Responsive Design */
+
+/* =========================
+   Mobile
+========================= */
 
 
 @media(max-width:1000px){
 
 
-    .cards,
-    .education-grid {
+.feature-grid {
 
-        grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(2,1fr);
 
-    }
+}
 
 
-    .news-container {
+.news-grid {
 
-        grid-template-columns:1fr;
+grid-template-columns:1fr;
 
-    }
+}
+
+
+.education-grid {
+
+grid-template-columns:1fr;
+
+}
+
 
 
 }
+
 
 
 
 @media(max-width:700px){
 
 
-    .navbar {
+.navbar {
 
-        flex-direction:column;
-        gap:20px;
+flex-direction:column;
 
-    }
+height:auto;
 
+padding:25px;
 
-    .nav-links {
+gap:25px;
 
-        flex-direction:column;
-        text-align:center;
-
-    }
+}
 
 
-    .cards,
-    .education-grid {
 
-        grid-template-columns:1fr;
+.nav-links {
 
-    }
+flex-direction:column;
 
-
-    .section {
-
-        padding:50px 25px;
-
-    }
+}
 
 
-    .hero h1 {
 
-        font-size:35px;
+.hero h1 {
 
-    }
+font-size:38px;
+
+}
+
+
+
+.section {
+
+padding:50px 25px;
+
+}
+
+
+
+.feature-grid {
+
+grid-template-columns:1fr;
+
+}
+
 
 
 }
